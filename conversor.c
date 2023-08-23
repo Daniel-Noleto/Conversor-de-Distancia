@@ -36,6 +36,19 @@ float quilometrosParaMetros(){
 }
 
 
+
+float centimetrosParaMetros(){
+    float m;
+    printf("\n\nInforme o valor em centimetros, cujo valor em metros deseja saber.\n");
+    scanf("%f", &m);
+
+
+    return (m * 0.01);
+}
+
+
+
+
 int main(){
 
     int op = 0;
@@ -44,7 +57,7 @@ int main(){
     
     do{
 
-        printf("\n\n--Conversor de Distancia--\n1-Metros para Centimetros.\n2-Metros para Quilometros\n3-Quilometros para Metros\n5-Sair\n");
+        printf("\n\n--Conversor de Distancia--\n1-Metros para Centimetros.\n2-Metros para Quilometros.\n3-Quilometros para Metros.\n4-Centimetros para Metros.\n5-Sair.\n");
         scanf("%d", &op);
 
         switch(op){
@@ -67,6 +80,11 @@ int main(){
                 printf("\nValor em Metros: %.2f m\n\n\n", convertido); 
                 break;
 
+
+            case 4:
+                convertido = centimetrosParaMetros();
+                printf("\nValor em Metros: %.2f m\n\n\n", convertido); 
+                break;
 
             default:
                 if(op != 5){
