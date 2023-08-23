@@ -3,9 +3,8 @@
 
 
 
-float metrosParaCentimetro(){
+float metrosParaCentimetro(float m){
 
-    float m;
     printf("\n\nInforme o valor em metros, cujo valor em centimetros deseja saber.\n");
     scanf("%f", &m);
 
@@ -14,9 +13,8 @@ float metrosParaCentimetro(){
 }
 
 
-float metrosParaQuilometro(){
+float metrosParaQuilometro(float m){
 
-    float m;
     printf("\n\nInforme o valor em metros, cujo valor em quilometros deseja saber.\n");
     scanf("%f", &m);
 
@@ -26,8 +24,8 @@ float metrosParaQuilometro(){
 }
 
 
-float quilometrosParaMetros(){
-    float m;
+float quilometrosParaMetros(float m){
+    
     printf("\n\nInforme o valor em quilometros, cujo valor em metros deseja saber.\n");
     scanf("%f", &m);
 
@@ -37,8 +35,8 @@ float quilometrosParaMetros(){
 
 
 
-float centimetrosParaMetros(){
-    float m;
+float centimetrosParaMetros(float m){
+    
     printf("\n\nInforme o valor em centimetros, cujo valor em metros deseja saber.\n");
     scanf("%f", &m);
 
@@ -52,7 +50,7 @@ float centimetrosParaMetros(){
 int main(){
 
     int op = 0;
-    float convertido;
+    float valor = 0, convertido;
 
     
     do{
@@ -64,25 +62,25 @@ int main(){
 
             case 1:
                 
-                convertido = metrosParaCentimetro();
+                convertido = metrosParaCentimetro(valor);
                 printf("\nValor em Centimetros: %.2f cm\n\n\n", convertido);
                 break;
 
 
             case 2:
-                convertido = metrosParaQuilometro();
+                convertido = metrosParaQuilometro(valor);
                 printf("\nValor em Quilometros: %.3f km\n\n\n", convertido); 
                 break;
 
 
             case 3:
-                convertido = quilometrosParaMetros();
+                convertido = quilometrosParaMetros(valor);
                 printf("\nValor em Metros: %.2f m\n\n\n", convertido); 
                 break;
 
 
             case 4:
-                convertido = centimetrosParaMetros();
+                convertido = centimetrosParaMetros(valor);
                 printf("\nValor em Metros: %.2f m\n\n\n", convertido); 
                 break;
 
